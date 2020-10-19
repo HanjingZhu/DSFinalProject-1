@@ -48,6 +48,13 @@ So each node in the Merkle Tree contains:
 4. A timestamp, which we can get with the getDate() method in the transaction class
 
 ![Merkle Tree Node](https://github.com/HanjingZhu/DSFinalProject-1/blob/master/Merkle%20Tree%20Node.png)
+
+### Merkle Tree Class
+Each node in the merkle tree is a merkle node struct. The insertion method for this merkle tree is the same as a binary search tree’s insertion method, but instead of the value being compared, it is the timestamp that is compared. Therefore, we can print the blockchain in chronological order by using a print in order algorithm.
+![Merkle Tree with Merkle Nodes](https://github.com/HanjingZhu/DSFinalProject-1/blob/master/Merkle%20Tree.png)
+So when we insert our transaction, it will be inserted into a tree like this. The insert function will compare its timestamp to all the timestamps in the tree, and recurse down to the end spot where it should be. When it is inserted, the parent transaction will point to it, and the parent left or right hash will be modified to be a hash of the transaction that we inserted. 
+
+
 Throughout this whole process, hashing is an important element to ensure that the transaction history has not been tampered with after its publication in the ledger of blockchain. All of these elements come together to make one big public ledger that ensures secure transactions between different parties over the internet. 
 
 Although there are many different ways to implement blockchain, some implementations are unnecessarily complex. The Merkle tree blockchain data structure is a simple solution to this.
