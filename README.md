@@ -46,7 +46,7 @@ So each node in the Merkle Tree contains:
 3. Left and right hashes of its children
 4. A timestamp, which we can get with the getDate() method in the transaction class
 
-![alt text](https://docs.google.com/drawings/d/1cFwn4rRe5AEIoIT-B4ghhlYug5ov8gU4lmPMgOEWCjQ/edit)
+![Merkle Tree Node](https://github.com/HanjingZhu/DSFinalProject-1/blob/master/Merkle%20Tree%20Node.png)
 Throughout this whole process, hashing is an important element to ensure that the transaction history has not been tampered with after its publication in the ledger of blockchain. All of these elements come together to make one big public ledger that ensures secure transactions between different parties over the internet. 
 
 Although there are many different ways to implement blockchain, some implementations are unnecessarily complex. The Merkle tree blockchain data structure is a simple solution to this.
