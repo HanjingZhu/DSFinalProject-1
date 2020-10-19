@@ -10,13 +10,9 @@ Blockchain is a public ledger that can be used to store transactions and to ensu
 - The amount of money
 - The date of the transaction
 
-An example of a transaction class object would be
-'''
-Receiver: Obi-Wan Kenobi
-Sender: Luke Skywalker
-Amount: $87.55
-Date: 03/23/2019
-'''
+## Cryptographic Hash Functions
+A cryptographic hash function is an important component of blockchain technology. A hash function takes in a string and encrypts it to an encrypted string of a fixed length。
+The cryptographic hash function we used here is **SHA-256** and we used this [unofficial C++ Implementation](https://gist.github.com/hak8or/8794351) for reference.
 
 Throughout this whole process, hashing is an important element to ensure that the transaction history has not been tampered with after its publication in the ledger of blockchain. All of these elements come together to make one big public ledger that ensures secure transactions between different parties over the internet. 
 
