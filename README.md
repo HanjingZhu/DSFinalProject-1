@@ -17,26 +17,26 @@ The cryptographic hash function we used here is **SHA-256** and we used this [un
 ### Hash Function Implementation
 *Test 1*
 
-Initial input string:  
+**Initial input string:**  
 
-SHA-256 Hashed string: 36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068
+**SHA-256 Hashed string:** 36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068
 
 *Test 2*
 
-Initial input string: Hello!
+**Initial input string:** Hello!
 
-SHA-256 Hashed string: 21c7a26677ef355f0af8b2958beaf352845633070902554c1a2d10728cba0986
+**SHA-256 Hashed string:** 21c7a26677ef355f0af8b2958beaf352845633070902554c1a2d10728cba0986
 
 *Test 3*
 
-Initial input string: Receiver: Obi-Wan Kenobi!
-SHA-256 Hashed string: 79ac3b649cc3e0fe135953080021105ca5c2000c9d82809f74b503d8ceaed7d6
+**Initial input string:** Receiver: Obi-Wan Kenobi!
+**SHA-256 Hashed string:** 79ac3b649cc3e0fe135953080021105ca5c2000c9d82809f74b503d8ceaed7d6
 
 *Test 4*
 
-Initial input string: Obi-Wan Kenobi! Luke Skywalker $44.56 5/4/2020
+**Initial input string:** Obi-Wan Kenobi! Luke Skywalker $44.56 5/4/2020
 
-SHA-256 Hashed string: 1d054e8658033d87c4f1e2f51e319d9254b7554739998b136370c4f87701e413
+**SHA-256 Hashed string:** 1d054e8658033d87c4f1e2f51e319d9254b7554739998b136370c4f87701e413
 
 ## Merkle Tree Blockchain
 Each node in the tree contains the hashes of its children.
@@ -47,13 +47,15 @@ So each node in the Merkle Tree contains:
 3. Left and right hashes of its children
 4. A timestamp, which we can get with the getDate() method in the transaction class
 
-<img src='https://github.com/HanjingZhu/DSFinalProject-1/blob/master/Merkle%20Tree%20Node.png' title='Merkle Tree Node' width='' />
+![Merkle Tree Node](https://github.com/HanjingZhu/DSFinalProject-1/blob/master/Merkle%20Tree%20Node.png)
+
 ### Merkle Tree Class
 Each node in the merkle tree is a merkle node struct. The insertion method for this merkle tree is the same as a binary search tree’s insertion method, but instead of the value being compared, it is the timestamp that is compared. Therefore, we can print the blockchain in chronological order by using a print in order algorithm.
 ![Merkle Tree with Merkle Nodes](https://github.com/HanjingZhu/DSFinalProject-1/blob/master/Merkle%20Tree.png)
+
 So when we insert our transaction, it will be inserted into a tree like this. The insert function will compare its timestamp to all the timestamps in the tree, and recurse down to the end spot where it should be. When it is inserted, the parent transaction will point to it, and the parent left or right hash will be modified to be a hash of the transaction that we inserted. 
 
-
+## Conclusion
 Throughout this whole process, hashing is an important element to ensure that the transaction history has not been tampered with after its publication in the ledger of blockchain. All of these elements come together to make one big public ledger that ensures secure transactions between different parties over the internet. 
 
 Although there are many different ways to implement blockchain, some implementations are unnecessarily complex. The Merkle tree blockchain data structure is a simple solution to this.
