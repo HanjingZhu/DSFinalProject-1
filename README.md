@@ -47,8 +47,7 @@ So each node in the Merkle Tree contains:
 3. Left and right hashes of its children
 4. A timestamp, which we can get with the getDate() method in the transaction class
 
-![Merkle Tree Node](https://github.com/HanjingZhu/DSFinalProject-1/blob/master/Merkle%20Tree%20Node.png)
-
+<img src='https://github.com/HanjingZhu/DSFinalProject-1/blob/master/Merkle%20Tree%20Node.png' title='Merkle Tree Node' width='' />
 ### Merkle Tree Class
 Each node in the merkle tree is a merkle node struct. The insertion method for this merkle tree is the same as a binary search tree’s insertion method, but instead of the value being compared, it is the timestamp that is compared. Therefore, we can print the blockchain in chronological order by using a print in order algorithm.
 ![Merkle Tree with Merkle Nodes](https://github.com/HanjingZhu/DSFinalProject-1/blob/master/Merkle%20Tree.png)
