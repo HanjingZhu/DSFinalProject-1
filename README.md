@@ -1,4 +1,4 @@
-# DSFinalProject
+# Data Structures FinalProject - Bloackchain Implementation in C++
 Blockchain is a public ledger that can be used to store transactions and to ensure that these transactions are not tampered with. Our blockchain used two major components:
 1. A transaction class that could represent all of the data of a given transaction, hash itself, and provide its date
 2. A Merkle Tree class that links transaction classes together with hash pointers and inserts transactions into the tree based on their date 
