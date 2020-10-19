@@ -17,11 +17,13 @@ The cryptographic hash function we used here is **SHA-256** and we used this [un
 *Test 1*
 
 Initial input string:  
+
 SHA-256 Hashed string: 36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068
 
 *Test 2*
 
 Initial input string: Hello!
+
 SHA-256 Hashed string: 21c7a26677ef355f0af8b2958beaf352845633070902554c1a2d10728cba0986
 
 *Test 3*
@@ -32,11 +34,19 @@ SHA-256 Hashed string: 79ac3b649cc3e0fe135953080021105ca5c2000c9d82809f74b503d8c
 *Test 4*
 
 Initial input string: Obi-Wan Kenobi! Luke Skywalker $44.56 5/4/2020
+
 SHA-256 Hashed string: 1d054e8658033d87c4f1e2f51e319d9254b7554739998b136370c4f87701e413
 
 ## Merkle Tree Blockchain
+Each node in the tree contains the hashes of its children.
+### Merkle Tree Node Struct
+So each node in the Merkle Tree contains:
+1. A templated value, which will be the transaction class itself
+2. Left and right pointers to its children
+3. Left and right hashes of its children
+4. A timestamp, which we can get with the getDate() method in the transaction class
 
-
+![alt text](https://docs.google.com/drawings/d/1cFwn4rRe5AEIoIT-B4ghhlYug5ov8gU4lmPMgOEWCjQ/edit)
 Throughout this whole process, hashing is an important element to ensure that the transaction history has not been tampered with after its publication in the ledger of blockchain. All of these elements come together to make one big public ledger that ensures secure transactions between different parties over the internet. 
 
 Although there are many different ways to implement blockchain, some implementations are unnecessarily complex. The Merkle tree blockchain data structure is a simple solution to this.
