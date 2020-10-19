@@ -15,18 +15,22 @@ A cryptographic hash function is an important component of blockchain technology
 The cryptographic hash function we used here is **SHA-256** and we used this [unofficial C++ Implementation](https://gist.github.com/hak8or/8794351) for reference.
 ### Hash Function Implementation
 *Test 1*
+
 Initial input string:  
 SHA-256 Hashed string: 36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068
 
 *Test 2*
+
 Initial input string: Hello!
 SHA-256 Hashed string: 21c7a26677ef355f0af8b2958beaf352845633070902554c1a2d10728cba0986
 
 *Test 3*
+
 Initial input string: Receiver: Obi-Wan Kenobi!
 SHA-256 Hashed string: 79ac3b649cc3e0fe135953080021105ca5c2000c9d82809f74b503d8ceaed7d6
 
 *Test 4*
+
 Initial input string: Obi-Wan Kenobi! Luke Skywalker $44.56 5/4/2020
 SHA-256 Hashed string: 1d054e8658033d87c4f1e2f51e319d9254b7554739998b136370c4f87701e413
 
