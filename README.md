@@ -14,7 +14,6 @@ Blockchain is a public ledger that can be used to store transactions and to ensu
 A cryptographic hash function is an important component of blockchain technology. A hash function takes in a string and encrypts it to an encrypted string of a fixed length。
 The cryptographic hash function we used here is **SHA-256** and we used this [unofficial C++ Implementation](https://gist.github.com/hak8or/8794351) for reference.
 ### Hash Function Implementation
-' ' '
 ----- Test 1 -----
 Initial input string:  
 SHA-256 Hashed string: 36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068
@@ -31,7 +30,9 @@ SHA-256 Hashed string: 79ac3b649cc3e0fe135953080021105ca5c2000c9d82809f74b503d8c
 Initial input string: Obi-Wan Kenobi! Luke Skywalker $44.56 5/4/2020
 SHA-256 Hashed string: 1d054e8658033d87c4f1e2f51e319d9254b7554739998b136370c4f87701e413
 
-' ' '
+## Merkle Tree Blockchain
+
+
 Throughout this whole process, hashing is an important element to ensure that the transaction history has not been tampered with after its publication in the ledger of blockchain. All of these elements come together to make one big public ledger that ensures secure transactions between different parties over the internet. 
 
 Although there are many different ways to implement blockchain, some implementations are unnecessarily complex. The Merkle tree blockchain data structure is a simple solution to this.
