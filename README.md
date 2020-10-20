@@ -1,4 +1,4 @@
-# Data Structures FinalProject - Bloackchain Implementation in C++
+# Data Structures Final Project - Bloackchain Implementation in C++
 ##### by Bridget Goodwine, Hanjing Zhu
 Blockchain is a public ledger that can be used to store transactions and to ensure that these transactions are not tampered with. Our blockchain used two major components:
 1. A transaction class that could represent all of the data of a given transaction, hash itself, and provide its date
@@ -30,6 +30,7 @@ The cryptographic hash function we used here is **SHA-256** and we used this [un
 *Test 3*
 
 **Initial input string:** Receiver: Obi-Wan Kenobi!
+
 **SHA-256 Hashed string:** 79ac3b649cc3e0fe135953080021105ca5c2000c9d82809f74b503d8ceaed7d6
 
 *Test 4*
